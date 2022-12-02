@@ -4,68 +4,68 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <title>Tutorial 1: UCS model from Gmsh &mdash; OpenFDEM Solver 0.0 documentation</title>
-  
 
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
-  
-  
 
-  
-  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
 
-  
 
-  
+
+
+
+
+
+
+
+
   <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
+    <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-    
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script src="static/jquery.js"></script>
+        <script src="static/underscore.js"></script>
+        <script src="static/doctools.js"></script>
+        <script src="static/language_data.js"></script>
+
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Tutorial 2: In Situ Stress Tutorial" href="insitu.html" />
-    <link rel="prev" title="Command Line Guide" href="command_line_guide.html" /> 
+    <link rel="prev" title="Command Line Guide" href="command_line_guide.html" />
 </head>
 
 <body class="wy-body-for-nav">
 
-   
+
   <div class="wy-grid-for-nav">
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
-          
+
+
             <a href="index.html" class="icon icon-home"> OpenFDEM Solver
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-          
 
-          
+
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -74,17 +74,17 @@
   </form>
 </div>
 
-          
+
         </div>
 
-        
+
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+
+
+
+
+
+
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Features and About OpenFDEM</a></li>
@@ -136,29 +136,29 @@
 <li class="toctree-l1"><a class="reference internal" href="developer.html#solid-class">Solid class</a></li>
 </ul>
 
-            
-          
+
+
         </div>
-        
+
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">OpenFDEM Solver</a>
-        
+
       </nav>
 
 
       <div class="wy-nav-content">
-        
+
         <div class="rst-content">
-        
-          
+
+
 
 
 
@@ -179,28 +179,28 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
+
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
+
       <li>Tutorial 1: UCS model from Gmsh</li>
-    
-    
+
+
       <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/ucs.rst.txt" rel="nofollow"> View page source</a>
-          
-        
+
+
+            <a href="sources/ucs.rst.txt" rel="nofollow"> View page source</a>
+
+
       </li>
-    
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <div class="section" id="tutorial-1-ucs-model-from-gmsh">
 <h1>Tutorial 1: UCS model from Gmsh<a class="headerlink" href="#tutorial-1-ucs-model-from-gmsh" title="Permalink to this headline">¶</a></h1>
 <p>This example will review how to setup a uniaxial compressive test example with output from Gmsh software.</p>
@@ -235,7 +235,7 @@ line into the input file:</p>
 <div class="section" id="step-1-mesh-pre-processing">
 <h3>Step 1. Mesh Pre-processing<a class="headerlink" href="#step-1-mesh-pre-processing" title="Permalink to this headline">¶</a></h3>
 <p>In your terminal, navigate to OpenFDEM and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">new</span> 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">new</span>
 </pre></div>
 </div>
 <p>You can create mesh based on the built-in command lines, OpenFDEM supports to create <code class="docutils literal notranslate"><span class="pre">retangular</span></code>, <code class="docutils literal notranslate"><span class="pre">circle</span></code>, <code class="docutils literal notranslate"><span class="pre">ellipse</span></code>,
@@ -243,19 +243,19 @@ line into the input file:</p>
 <code class="docutils literal notranslate"><span class="pre">intersection</span></code>, <code class="docutils literal notranslate"><span class="pre">union</span></code>, <code class="docutils literal notranslate"><span class="pre">difference</span></code> and <code class="docutils literal notranslate"><span class="pre">fragment</span></code> between different entities.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a domain xmin =-25e-3, xmax =25e-3 , ymin=-50e-3, ymax=50e-3 </span>
 <span class="c1"># The domain is mandatory when the particles or material points are used </span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">domain</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">domain</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a retangular block, group tag is specimen, the range is xmin =25e-3, xmax =25e-3, ymin=-50e-3,ymax= 50e-3</span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;specimen&#39;</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;specimen&#39;</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a block for the upper plate</span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;up_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="mf">50e-3</span>  <span class="mf">55e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;up_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="mf">50e-3</span>  <span class="mf">55e-3</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a block for the down plate</span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;down_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="o">-</span><span class="mf">55e-3</span>  <span class="o">-</span><span class="mf">50e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;down_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="o">-</span><span class="mf">55e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>
 </pre></div>
 </div>
 <p>After creating geometry entities, you can assign mesh size to the whole model with <code class="docutils literal notranslate"><span class="pre">all</span></code> keyword and it is also possible to assign
@@ -365,17 +365,17 @@ variables on the specific entity at every step.</p>
 <span class="c1"># It is a example to run UCS test in OpenFDEM solver, the model contains three entities, the upper plate</span>
 <span class="c1">#, the down plate and the specimen, the dimension is 50 x 100 (mm), unit system is m-kg-s.</span>
 <span class="c1"># clear old memories, be optional</span>
-<span class="n">of</span><span class="o">.</span><span class="n">new</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># create a domain xmin =-25e-3, xmax =25e-3 , ymin=-50e-3, ymax=50e-3 </span>
 <span class="c1"># The domain is mandatory when the particles or material points are used </span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">domain</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">domain</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span>
 <span class="c1"># Create a retangular block, group tag is specimen, the range is xmin =25e-3, xmax =25e-3, ymin=-50e-3,ymax= 50e-3</span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;specimen&#39;</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;specimen&#39;</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="mf">25e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>  <span class="mf">50e-3</span>
 <span class="c1"># Create a block for the upper plate</span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;up_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="mf">50e-3</span>  <span class="mf">55e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;up_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="mf">50e-3</span>  <span class="mf">55e-3</span>
 <span class="c1"># Create a block for the down plate</span>
-<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;down_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="o">-</span><span class="mf">55e-3</span>  <span class="o">-</span><span class="mf">50e-3</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;down_plate&#39;</span> <span class="o">-</span><span class="mf">35e-3</span> <span class="mf">35e-3</span>  <span class="o">-</span><span class="mf">55e-3</span>  <span class="o">-</span><span class="mf">50e-3</span>
 
 <span class="sd">&#39;&#39;&#39; There are four methods to create mesh, 1- user defined commands in prepprocessing, it will call gmsh kernel to mesh the geometry</span>
 <span class="sd">, 2- import .geo file for gmsh, 3- import .msh file (less than V 2.4) and 4- import .inp file from other codes &#39;&#39;&#39;</span>
@@ -433,7 +433,7 @@ variables on the specific entity at every step.</p>
 <span class="c1"># total run steps</span>
 <span class="n">of</span><span class="o">.</span><span class="n">step</span> <span class="mi">150000</span>
 <span class="c1"># write history to .csv files</span>
-<span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">write</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">write</span>
 <span class="c1"># terminate the run and step out solver</span>
 <span class="n">of</span><span class="o">.</span><span class="n">stop</span>
 </pre></div>
@@ -442,7 +442,7 @@ variables on the specific entity at every step.</p>
 <div class="section" id="tutorial-log-output">
 <h3>Tutorial Log Output<a class="headerlink" href="#tutorial-log-output" title="Permalink to this headline">¶</a></h3>
 <p>For this tutorial, the default <code class="docutils literal notranslate"><span class="pre">openfdem.log</span></code> would look as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parsing</span> <span class="s1">&#39;&#39;&#39; **********_________________________****/__\|____|__\|____|\/|****||||_________||__|||||__|\/|****||||&#39;_\/_</span><span class="se">\&#39;</span><span class="s1">_\|__|||||__|||\/||****||__|||_)|__/||||||__|||____||||****\____/|.__/\___|_||_|_||_____/|______|_||_|****||OpenFreeFiniteElement****|_|andDiscreteElementMethodSolver********OpenFDEM:ObjectOrientedOpenFreeFiniteDiscreteElementCode********Copyright(C)2017-2021XiaofengLi****Email:xfli@whrsm.ac.cn******generalcommentsofthisinputfile!youcanuse</span><span class="se">\&#39;</span><span class="s1">&#39;&#39;tocommentseverallinesanduse#tocommenteachline&#39;&#39;&#39;</span> 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parsing</span> <span class="s1">&#39;&#39;&#39; **********_________________________****/__\|____|__\|____|\/|****||||_________||__|||||__|\/|****||||&#39;_\/_</span><span class="se">\&#39;</span><span class="s1">_\|__|||||__|||\/||****||__|||_)|__/||||||__|||____||||****\____/|.__/\___|_||_|_||_____/|______|_||_|****||OpenFreeFiniteElement****|_|andDiscreteElementMethodSolver********OpenFDEM:ObjectOrientedOpenFreeFiniteDiscreteElementCode********Copyright(C)2017-2021XiaofengLi****Email:xfli@whrsm.ac.cn******generalcommentsofthisinputfile!youcanuse</span><span class="se">\&#39;</span><span class="s1">&#39;&#39;tocommentseverallinesanduse#tocommenteachline&#39;&#39;&#39;</span>
 <span class="n">parsing</span> <span class="c1"># clear old memories, be optional</span>
 <span class="n">parsing</span> <span class="n">of</span><span class="o">.</span><span class="n">new</span>
 <span class="n">parsing</span> <span class="c1"># create a domain xmin =-25e-3, xmax =25e-3 , ymin=-50e-3, ymax=50e-3 </span>
@@ -450,7 +450,7 @@ variables on the specific entity at every step.</p>
 <span class="n">parsing</span> <span class="c1"># Create a retangular block, group tag is specimen, the range is xmin =25e-3, xmax =25e-3, ymin=-50e-3,ymax= 50e-3</span>
 <span class="n">parsing</span> <span class="c1"># Create a block for the upper plate</span>
 <span class="n">parsing</span> <span class="c1"># Create a block for the down plate</span>
-<span class="n">parsing</span> <span class="s1">&#39;&#39;&#39; Therearefourmethodstocreatemesh,1-userdefinedcommandsinprepprocessing,itwillcallgmshkerneltomeshthegeometry,2-import.geofileforgmsh,3-import.mshfile(lessthanV2.4)and4-import.inpfilefromothercodes&#39;&#39;&#39;</span> 
+<span class="n">parsing</span> <span class="s1">&#39;&#39;&#39; Therearefourmethodstocreatemesh,1-userdefinedcommandsinprepprocessing,itwillcallgmshkerneltomeshthegeometry,2-import.geofileforgmsh,3-import.mshfile(lessthanV2.4)and4-import.inpfilefromothercodes&#39;&#39;&#39;</span>
 <span class="n">parsing</span> <span class="c1"># assign global mesh size, the default keyword is for global entities</span>
 <span class="n">parsing</span> <span class="c1"># assign specific mesh size to group &#39;specimen&#39;</span>
 <span class="n">parsing</span> <span class="c1"># starts to mesh, delaunay is optional, it is the default value</span>
@@ -474,7 +474,7 @@ variables on the specific entity at every step.</p>
 <span class="n">parsing</span> <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">interval</span>
 <span class="n">parsing</span> <span class="c1"># interval to write paraview field results</span>
 <span class="n">parsing</span> <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">interval</span>
-<span class="n">parsing</span> <span class="s1">&#39;&#39;&#39; Exportfieldvariables,defaultistoexportallvariables,theusrcanchoosetoexportspecificvariablesusingkeywords&#39;&#39;&#39;</span> 
+<span class="n">parsing</span> <span class="s1">&#39;&#39;&#39; Exportfieldvariables,defaultistoexportallvariables,theusrcanchoosetoexportspecificvariablesusingkeywords&#39;&#39;&#39;</span>
 <span class="n">parsing</span> <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">field</span>
 <span class="n">parsing</span> <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">fracture</span>
 <span class="n">parsing</span> <span class="c1"># monitor the average nodal displacemnt in upper plate every step</span>
@@ -523,7 +523,7 @@ variables on the specific entity at every step.</p>
 
 
            </div>
-           
+
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
@@ -539,14 +539,14 @@ variables on the specific entity at every step.</p>
 
     </p>
   </div>
-    
-    
-    
+
+
+
     Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
         </div>
@@ -555,7 +555,7 @@ variables on the specific entity at every step.</p>
     </section>
 
   </div>
-  
+
 
   <script type="text/javascript">
       jQuery(function () {
@@ -563,10 +563,10 @@ variables on the specific entity at every step.</p>
       });
   </script>
 
-  
-  
-    
-   
+
+
+
+
 
 </body>
 </html>

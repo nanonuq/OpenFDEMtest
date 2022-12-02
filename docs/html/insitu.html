@@ -4,68 +4,68 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <title>Tutorial 2: In Situ Stress Tutorial &mdash; OpenFDEM Solver 0.0 documentation</title>
-  
 
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
-  
-  
 
-  
-  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
 
-  
 
-  
+
+
+
+
+
+
+
+
   <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
+    <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-    
+
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script src="static/jquery.js"></script>
+        <script src="static/underscore.js"></script>
+        <script src="static/doctools.js"></script>
+        <script src="static/language_data.js"></script>
+
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Solid FEM Engine" href="theory.html" />
-    <link rel="prev" title="Tutorial 1: UCS model from Gmsh" href="ucs.html" /> 
+    <link rel="prev" title="Tutorial 1: UCS model from Gmsh" href="ucs.html" />
 </head>
 
 <body class="wy-body-for-nav">
 
-   
+
   <div class="wy-grid-for-nav">
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
-          
+
+
             <a href="index.html" class="icon icon-home"> OpenFDEM Solver
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-          
 
-          
+
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -74,17 +74,17 @@
   </form>
 </div>
 
-          
+
         </div>
 
-        
+
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+
+
+
+
+
+
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Features and About OpenFDEM</a></li>
@@ -138,29 +138,29 @@
 <li class="toctree-l1"><a class="reference internal" href="developer.html#solid-class">Solid class</a></li>
 </ul>
 
-            
-          
+
+
         </div>
-        
+
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">OpenFDEM Solver</a>
-        
+
       </nav>
 
 
       <div class="wy-nav-content">
-        
+
         <div class="rst-content">
-        
-          
+
+
 
 
 
@@ -181,28 +181,28 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
+
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
+
       <li>Tutorial 2: In Situ Stress Tutorial</li>
-    
-    
+
+
       <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/insitu.rst.txt" rel="nofollow"> View page source</a>
-          
-        
+
+
+            <a href="sources/insitu.rst.txt" rel="nofollow"> View page source</a>
+
+
       </li>
-    
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <div class="section" id="tutorial-2-in-situ-stress-tutorial">
 <h1>Tutorial 2: In Situ Stress Tutorial<a class="headerlink" href="#tutorial-2-in-situ-stress-tutorial" title="Permalink to this headline">¶</a></h1>
 <p>This example will review how to setup an insitu excavation example, defining the mesh in the <code class="docutils literal notranslate"><span class="pre">.of</span></code> file.</p>
@@ -274,10 +274,10 @@
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># excavte the tunnel</span>
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">excavation</span> <span class="s1">&#39;excavation&#39;</span>
 <span class="c1"># fix the outer boundaries</span>
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;bottom&#39;</span> <span class="n">Y</span> <span class="mi">0</span> 
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;up&#39;</span> <span class="n">Y</span> <span class="mi">0</span> 
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;left&#39;</span> <span class="n">X</span> <span class="mi">0</span> 
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;right&#39;</span> <span class="n">X</span> <span class="mi">0</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;bottom&#39;</span> <span class="n">Y</span> <span class="mi">0</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;up&#39;</span> <span class="n">Y</span> <span class="mi">0</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;left&#39;</span> <span class="n">X</span> <span class="mi">0</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;right&#39;</span> <span class="n">X</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -288,10 +288,10 @@
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># excavte the tunnel</span>
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">excavation</span> <span class="s1">&#39;excavation&#39;</span>
 <span class="c1"># fix the outer boundaries</span>
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;bottom&#39;</span> <span class="n">Y</span> <span class="mi">0</span> 
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;up&#39;</span> <span class="n">Y</span> <span class="mi">0</span> 
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;left&#39;</span> <span class="n">X</span> <span class="mi">0</span> 
-<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;right&#39;</span> <span class="n">X</span> <span class="mi">0</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;bottom&#39;</span> <span class="n">Y</span> <span class="mi">0</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;up&#39;</span> <span class="n">Y</span> <span class="mi">0</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;left&#39;</span> <span class="n">X</span> <span class="mi">0</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;right&#39;</span> <span class="n">X</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -325,17 +325,17 @@
 **            Copyright (C) 2017 - 2021   Xiaofeng Li                                  **
 **                         Email: xfli&#64;whrsm.ac.cn                                     **
 **                                                                                     **
-general comments of this input file! you can use \''' to comment several lines and use # to 
+general comments of this input file! you can use \''' to comment several lines and use # to
 comment each line '''
 ''' It is an example to apply the in-situ stress using insitu method, the main steps are: 1-
-    apply in-situ stress in the model and run 1,000 steps to balance the model. 
-        2- fixed the boundaries and excavted the hole after the equlibrium. 
+    apply in-situ stress in the model and run 1,000 steps to balance the model.
+        2- fixed the boundaries and excavted the hole after the equlibrium.
         model dimesion is 1.0 x 1.0 m and the unit system is m-kg-s '''
-        
-        
+
+
 # Create a retangular block, group tag is rock, the range is xmin =0, xmax =1, ymin=0,ymax= 1
 of.geometry.square 'rock' 0 1 0 1
-# Create a hole in the block, cut is to fragment the block and seprate the rock block to hole block and 
+# Create a hole in the block, cut is to fragment the block and seprate the rock block to hole block and
 # new rock block (out of the hole block)
 of.geometry.cut.circle 'hole' 'rock' 0.5 0.5 0.1 70
 # assign global mesh size, the default keyword is for global entities
@@ -371,15 +371,15 @@ of.step 1000
 # insert cohesive elements, the cohesive elements should be inserted fater in-situ stress
 of.mesh.insert 'all'
 # assign material parameters for cohesive elements
-of.mat.cohesive 'all' EM ten 10e6 coh 20e6 fric 0.3 GI 20 GII 40 
+of.mat.cohesive 'all' EM ten 10e6 coh 20e6 fric 0.3 GI 20 GII 40
 
 # excavte the tunnel
 of.boundary.excavation 'excavation'
 # fix the outer boundaries
-of.boundary.nodal.velocity 'bottom' Y 0 
-of.boundary.nodal.velocity 'up' Y 0 
-of.boundary.nodal.velocity 'left' X 0 
-of.boundary.nodal.velocity 'right' X 0 
+of.boundary.nodal.velocity 'bottom' Y 0
+of.boundary.nodal.velocity 'up' Y 0
+of.boundary.nodal.velocity 'left' X 0
+of.boundary.nodal.velocity 'right' X 0
 
 of.step 50000
 # terminate the run and step out solver
@@ -418,7 +418,7 @@ of.stop
 
 
            </div>
-           
+
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
@@ -434,14 +434,14 @@ of.stop
 
     </p>
   </div>
-    
-    
-    
+
+
+
     Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
         </div>
@@ -450,7 +450,7 @@ of.stop
     </section>
 
   </div>
-  
+
 
   <script type="text/javascript">
       jQuery(function () {
@@ -458,10 +458,10 @@ of.stop
       });
   </script>
 
-  
-  
-    
-   
+
+
+
+
 
 </body>
 </html>
