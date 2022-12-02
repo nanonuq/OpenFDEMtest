@@ -1,0 +1,8 @@
+Command Line Guide
+############################
+
+.. csv-table:: OpenFDEM Inputs
+   :file: ../../table.csv
+   :header-rows: 1
+
+.. include:: word_tutorial.rst
