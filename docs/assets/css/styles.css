@@ -1,9 +1,4 @@
----
----
-
-@import "{{ site.theme }}";
-
-navbar {
+.navbar {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
