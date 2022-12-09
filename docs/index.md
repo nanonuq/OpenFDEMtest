@@ -1,6 +1,7 @@
 ---
 layout: welcome
 title: Home
+permalink: /
 ---
 <div class="splash">
 	<img src="/assets/images/ucs-test.gif">
