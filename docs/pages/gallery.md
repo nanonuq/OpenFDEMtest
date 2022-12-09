@@ -1,19 +1,8 @@
-<!doctype html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://nanonuq.github.io/OpenFDEMtest/assets/css/styles.css">
-    <meta charset="utf-8">
-    <title>OpenFDEM Gallery</title>
-  </head>
-  <body>
-<div class="navbar">
-  <div class='logo'><a href="/OpenFDEM/"><img src="https://nanonuq.github.io/OpenFDEMtest/assets/images/logo-250px.png"></a></div>
-  <div><a href="https://github.com/OpenFDEM">Source (on GitHub)</a></div>
-  <div><a href="https://nanonuq.github.io/OpenFDEMtest/html/rst_tutorials/tutorial1_ucs.html">Tutorials</a></div>
-  <div><a href="https://nanonuq.github.io/OpenFDEMtest/html/">Documentation</a></div>
-  <a href="https://nanonuq.github.io/OpenFDEMtest/gallery">Gallery</a>
-</div> 
-	  
+---
+layout: welcome
+title: "OpenFDEM Gallery"
+permalink: /gallery
+---
 <div class="gallery">
 	<div class="galleryimg">
 		<a href="https://nanonuq.github.io/OpenFDEMtest/assets/images/ucs_example.png"><img src="https://nanonuq.github.io/OpenFDEMtest/assets/images/ucs_example.png"></a>
@@ -32,5 +21,3 @@
 		(Linked animation) Effects of blasting a borehole.
 		</div>
 	</div>
-  </body>
-</html>
