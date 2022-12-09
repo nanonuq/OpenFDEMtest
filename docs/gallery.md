@@ -1,6 +1,7 @@
 ---
 layout: welcome
 title: Gallery
+permalink: /gallery
 ---
 <div class="gallery">
 	<div class="galleryimg">
